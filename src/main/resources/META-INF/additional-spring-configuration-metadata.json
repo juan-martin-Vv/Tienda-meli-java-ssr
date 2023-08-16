@@ -1,0 +1,37 @@
+{"properties": [
+  {
+    "name": "url.backurl",
+    "type": "java.lang.String",
+    "description": "A description for 'url.backurl'"
+  },
+  {
+    "name": "url.notification",
+    "type": "java.lang.String",
+    "description": "A description for 'url.notification'"
+  },
+  {
+    "name": "url.base",
+    "type": "java.lang.String",
+    "description": "A description for 'url.base'"
+  },
+  {
+    "name": "url.notificationOwen",
+    "type": "java.lang.String",
+    "description": "A description for 'url.notificationOwen'"
+  },
+  {
+    "name": "dev.email",
+    "type": "java.lang.String",
+    "description": "A description for 'dev.email'"
+  },
+  {
+    "name": "dev.integratorId",
+    "type": "java.lang.String",
+    "description": "A description for 'dev.integratorId'"
+  },
+  {
+    "name": "dev.AccessToken",
+    "type": "java.lang.String",
+    "description": "A description for 'dev.AccessToken'"
+  }
+]}

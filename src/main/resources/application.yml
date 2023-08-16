@@ -1,0 +1,10 @@
+
+url:
+  base: ${HostName:#{"http://localhost:8080"}} 
+  backurl: /store/process
+  notificationOwen: /store/notification
+  notification: https://eomjxns1j72nfyu.m.pipedream.net
+dev:
+  email: ${DevEmail:#{"email@email.com"}}
+  AccessToken: ${accessToken}
+  integratorId: ${integratorId}

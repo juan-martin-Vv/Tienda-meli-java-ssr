@@ -1,0 +1,47 @@
+{
+    "products":[
+        {
+            "id":"1001",
+            "title":"moto 3",
+            "price":12.3,
+            "unit":2,
+            "img":"/assets/moto-g3.jpg"
+        },
+        {
+            "id":"1002",
+            "title":"iphone 3",
+            "price":21.3,
+            "unit":12,
+            "img":"/assets/iphone-4.jpg"
+        },
+        {
+            "id":"1003",
+            "title":"S22",
+            "price":121.3,
+            "unit":55,
+            "img":"/assets/samsung-s22.jpg"
+        },
+        {
+            "id":"1004",
+            "title":"S20",
+            "price":112.3,
+            "unit":55,
+            "img":"/assets/samsung-s20.jpg"
+        },
+        {
+            "id":"1005",
+            "title":"Moto G5 Plus",
+            "price":151.3,
+            "unit":55,
+            "img":"/assets/motorola-moto-g5-plus-1.jpg"
+        },
+        {
+            "id":"1006",
+            "title":"lg G6",
+            "price":51.3,
+            "unit":55,
+            "img":"/assets/l6g6.jpg"
+        }
+    ]
+    
+}

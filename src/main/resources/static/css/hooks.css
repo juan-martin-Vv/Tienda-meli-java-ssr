@@ -1,0 +1,56 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+body{
+    display: grid;
+    background-color: white;
+    gap: 1em;
+    grid-template:  "a h h" 5em
+                          "a n n"  3em
+                          "a m m"   auto
+                          "f f f" 3em 
+                          /1fr 3fr 3fr;
+    
+    /* border: red 1px solid; */
+}
+header{
+    grid-area: h;
+    background-color: rgba(239, 217, 22, 0.598);
+    font-size: x-large;
+    display: grid;
+    place-items: center;
+    text-transform: uppercase;
+}
+aside{
+    grid-area: a;
+    padding: 1em;
+    background: black;
+    color: white;
+    font-size: larger;
+}
+nav{
+    grid-area: n;
+    border: green 1px solid;
+}
+main{
+    grid-area: m;
+    margin: 0.5em;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px gray;
+    background-color: white;
+    border: black 2px solid;
+}
+footer{
+    grid-area: f;
+    display: grid;
+    place-items: center;
+    background-color: blueviolet;
+    color: white;
+}

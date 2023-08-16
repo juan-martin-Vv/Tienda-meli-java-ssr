@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html th:replace="~{layout/main :: layout(~{::title}, ~{::section}, ~{::link})}">
+
+<head>
+    <title th:text="${titulo}"></title>
+    <link rel="stylesheet" href="/css/back.css">
+</head>
+
+<body>
+    <section>
+        <div th:fragment="backurls">
+            <div class="as-search-wrapper" role="main">
+                <div class="as-navtuck-wrapper">
+                    <div class="as-l-fullwidth  as-navtuck" data-events="event52">
+                        <div>
+                            <div class="pd-billboard pd-category-header">
+                                <div class="pd-l-plate-scale">
+                                    <div class="pd-billboard-background">
+                                        <img src="/assets/music-audio-alp-201709" alt="" width="1440" height="320"
+                                            data-scale-params-2="wid=2880&amp;hei=640&amp;fmt=jpeg&amp;qlt=95&amp;op_usm=0.5,0.5&amp;.v=1503948581306"
+                                            class="pd-billboard-hero ir">
+                                    </div>
+                                    <div class="pd-billboard-info">
+                                        <h1 class="pd-billboard-header pd-util-compact-small-18">Tienda e-commerce</h1>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="as-search-results as-filter-open as-category-landing as-desktop" id="as-search-results">
+
+                    <div id="accessories-tab" class="as-accessories-details">
+                        <div class="as-accessories" id="as-accessories">
+                            <div class="as-accessories-header">
+                                <div class="as-search-results-count">
+                                    <span class="as-search-results-value"></span>
+                                </div>
+                            </div>
+                            <div class="as-searchnav-placeholder" style="height: 77px;">
+                                <div class="row as-search-navbar" id="as-search-navbar" style="width: auto;">
+                                    <div class="as-accessories-filter-tile column large-6 small-3">
+
+                                        <button class="as-filter-button" aria-expanded="true"
+                                            aria-controls="as-search-filters" type="button">
+                                            <h2 class=" as-filter-button-text">
+                                                Smartphones
+                                            </h2>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="callBack" >
+                                <div th:if="${status} eq 'success' or ${status} eq 'approved'" class="status success" >Su pago se completo con Exito!</div>
+                                <!-- <div th:case="'success'" class="status success">Su pago se completo con Exito!</div>
+                                <div th:case="'approved'" class="status success">Su pago se completo con Exito!</div> -->
+                                <div th:if="${status} eq 'failure' or ${status} eq rejected" class="status failure">Su pago fue cancelado o rechazado</div>
+                                <div th:if="${status} eq 'pending'" class="status pending">Su pago esta pendiente de acreditacion </div>            
+                                <div th:if="${status} eq 'null'" class="status null">Su fue cancelada</div>            
+
+                            </div>
+                            <div class="as-accessories-results  as-search-desktop">
+                                <div class="width:60%" style="display: grid; grid-template-columns: 1fr 2fr;">
+                                    <div class="as-producttile-tilehero with-paddlenav ">
+                                        <div class="as-dummy-container as-dummy-img">
+
+                                            <img src="/assets/wireless-headphones"
+                                                class="ir ir item-image as-producttile-image  "
+                                                style="max-width: 70%;max-height: 70%;" alt="" width="445" height="445">
+                                        </div>
+                                        <div class="images mini-gallery gal5 ">
+
+
+                                            <div class="as-isdesktop with-paddlenav with-paddlenav-onhover">
+                                                <div class="clearfix image-list xs-no-js as-util-relatedlink relatedlink"
+                                                    data-relatedlink="6|Powerbeats3 Wireless Earphones - Neighborhood Collection - Brick Red|MPXP2">
+                                                    <div class="as-tilegallery-element as-image-selected"
+                                                        style="height: 450px; width: 550px;">
+                                                        <img src="/assets/003.jpg" th:attr="src=${phone.img}"
+                                                            class="ir ir item-image as-producttile-image" alt=""
+                                                            width="445px" height="445px" id="img" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div style="min-height: auto; padding: 1rem 1.5rem 0.5rem 1rem;">
+                                        <div style="height: 100%;">
+
+                                            <div class="as-producttile-name"
+                                                style="text-align:left; border-bottom: gray 3px solid;">
+                                                <p style="font-size: 2.5rem;">
+                                                    <strong><span data-ase-truncate="2" th:text="${phone.title}"
+                                                            id="title"></span>
+                                                    </strong>
+                                                </p>
+                                            </div>
+                                            <div>
+                                                <!-- <p id="id" th:text="${phone.id}" style="display: none;"></p> -->
+                                                <p style="font-size: 1.5rem;"><strong>$<span th:text="${phone.price}"
+                                                            id="price"></span></strong></p>                                                
+
+                                                <p th:text="${phone.unit}" id="unit" hidden="true"></p>                        
+                                                <p>Payment Method Id:
+                                                    <span th:text="${payment_method_id}"></span>    
+                                                </p>   
+                                                <p>External Reference:
+                                                    <span th:text="${external_reference}"></span>    
+                                                </p>
+                                                <p>Payment Id:
+                                                    <span th:text="${payment_id}"></span>    
+                                                </p>
+                                                <p>Query recive:
+                                                    <table>
+                                                        <tr th:each="data,itrStat : ${query_rec}">                                                  
+                                                                <td>
+                                                                    <span th:text="${itrStat.count}"></span>:
+                                                                    <span th:text="${data}"></span>
+                                                                </td> </td>                                                        
+                                                        </tr>
+                                                    </table>
+                                                </p>   
+                                                <p><strong>Producto Ficticio</strong> NO realiza la compra de este
+                                                    Producto
+                                                </p>
+                                                <p>Esto es parte de una prueba de integracion</p>
+                                                
+                                                <button class="mercadopago-button"
+                                                    onclick="window.location.href='/store';">Volver</button>
+                                                <div class="cho-container"></div>
+                                            </div>                                        
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>                            
+                        </div>
+                    </div>
+                    <script src="https://www.mercadopago.com/v2/security.js" view="view"></script>
+    </section>
+
+
+</body>
+
+</html>
